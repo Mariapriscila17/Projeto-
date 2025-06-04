@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* ========== VARIÁVEIS GLOBAIS ========== */
+:root {
+  --bg: #f9fafb;
+  --bg-gradient: linear-gradient(135deg, #f9fafb 0%, #e3e7ea 100%);
+  --text: #2b2b2b;
+  --primary: #3b3b3b;
+  --secondary: #7a8a99;
+  --card: #ffffff;
+  --button: #5a5a5a;
+  --button-hover: #373737;
+  --radius: 14px;
+  --shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --gap: 18px;
+}
+
+/* ========== RESET E BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 40px 25px;
+  font-size: 1.05rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+/* ========== HEADER ========== */
+header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: var(--secondary);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/* ========== NAVEGAÇÃO ========== */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap);
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: var(--gap);
+}
+
+.button {
+  background-color: var(--button);
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 3px 7px rgba(0,0,0,0.12);
+  transition: var(--transition);
+  user-select: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.7px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--button-hover);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+/* ========== SEÇÕES PRINCIPAIS ========== */
+main section {
+  margin-bottom: 60px;
+}
+
+main h2 {
+  font-size: 2rem;
+  color: var(--primary);
+  border-left: 6px solid var(--secondary);
+  padding-left: 18px;
+  margin-bottom: 28px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+
+/* ========== IMAGEM DE PERFIL ========== */
+#foto {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+#foto img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  transition: transform 0.4s ease;
+}
+
+#foto img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* ========== PROJETOS / CARDS ========== */
+.projeto {
+  background-color: var(--card);
+  padding: 28px 26px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 26px;
+  transition: var(--transition);
+  cursor: default;
+}
+
+.projeto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.14);
+}
+
+.projeto h3 {
+  color: var(--primary);
+  margin-bottom: 14px;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.projeto p {
+  color: #555;
+  margin-bottom: 10px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* ========== CONTATO ========== */
+#contato a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#contato a:hover,
+#contato a:focus {
+  text-decoration: underline;
+  color: var(--button-hover);
+}
+
+/* ========== RODAPÉ ========== */
+footer {
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
